@@ -1,0 +1,35 @@
+  104  git add .
+  105  git commit -m "Complete Practice 2: working with files"
+  106  git push
+  107  clear
+  108  mkdir -p /tmp/first-repo && cd /tmp/first-repo
+  109  git init
+  110  ls -a
+  111  ls .git
+  112  echo "перший рядок" > notes.txt
+  113  git status
+  114  git add notes.txt
+  115  git status
+  116  git commit -m "first commit"
+  117  git status
+  118  clear
+  119  git log
+  120  git show HEAD
+  121  echo "текст" > second.txt
+  122  git add second.txt
+  123  git commit -m "add second file"
+  124  git ls-tree HEAD
+  125  git ls-tree HEAD~1
+  126  clear
+  127  git remote -v
+  128  cd /tmp && cp -r first-repo repo-copy && cd repo-copy
+  129  git log --oneline
+  130  rm -rf .git
+  131  ls
+  132  git log --oneline
+  133  cd /c/gethub/java-template
+  134  git remote -v
+  135  git log --oneline -n 5
+  136  cat .git/HEAD
+  137  cat .git/config
+  138  history | tail -n 35 > git_track_2_log.txt
