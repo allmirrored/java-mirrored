@@ -3,12 +3,12 @@ WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.i
 WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] ----------------------< org.alexr:java-homeworks >----------------------
 [INFO] Building java-homeworks 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
+[INFO]
 [INFO] --- spotless:3.9.0:check (default-cli) @ java-homeworks ---
 [INFO] Spotless.Java is keeping 33 files clean - 0 needs changes to be clean, 0 were already clean, 33 were skipped because caching determined they were already clean
 [INFO] ------------------------------------------------------------------------
