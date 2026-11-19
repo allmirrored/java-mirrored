@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Java 25 checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@v7
+      - name: Set up JDK 25
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: maven
+      - name: Verify README exists
+        run: test -f readme.md
+      - name: Check formatting and run tests
+        run: mvn --batch-mode --no-transfer-progress -Djqwik.database=target/jqwik-database spotless:check test
