@@ -51,3 +51,17 @@ mvn test spotless:check
 - Для першої збірки потрібен доступ до Maven Central, щоб завантажити
   публічні залежності й плагіни. Наступні збірки використовують локальний кеш.
 
+## Автоматичні перевірки (CI)
+
+GitHub Actions запускає workflow `ci` після push і для pull request у `master`.
+Перевірка `Java 25 checks` використовує JDK 25, перевіряє наявність `readme.md`,
+форматування та тести:
+
+```shell
+mvn --batch-mode --no-transfer-progress -Djqwik.database=target/jqwik-database spotless:check test
+```
+
+Форматування перевіряється перед тестами, оскільки Maven також автоматично
+форматує джерела під час життєвого циклу збірки. Результат CI видно у вкладці
+Checks відповідного PR та у вкладці Actions репозиторію.
+
