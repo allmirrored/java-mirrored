@@ -26,14 +26,15 @@
 Для h07 использованы прежние исходники FizzBuzz и NumberOfSteps и описание
 коммита `607b704`. Позднее владелец прислал текст Classroom практической 7:
 412 и 1342 подтверждены, D2 для h07 выполнен. Код и фотографии хранятся отдельно.
-Для h01–h06 подтверждения из Classroom нет: D2 остаётся открытым. Старые
+Для h03 условия Classroom получены 20 ноября: задачи 1491 и 2894,
+код и тесты заменены. Для h01–h02/h04–h06 D2 остаётся открытым. Старые
 скриншоты p2, p4–p6 относятся к другим задачам, чем ссылки шаблона.
 
 | Занятие | T1 | T2 |
 | --- | --- | --- |
 | h01 | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [223. Rectangle Area](https://leetcode.com/problems/rectangle-area/) |
 | h02 | [67. Add Binary](https://leetcode.com/problems/add-binary/) | [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) |
-| h03 | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/) |
+| h03 | [1491. Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/) | [2894. Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/) |
 | h04 | [66. Plus One](https://leetcode.com/problems/plus-one/) | [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman/) |
 | h05 | [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) |
 | h06 | [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/) | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) |
@@ -124,7 +125,7 @@ JDK содержит `javap` для просмотра байткода, это 
 Общий профиль хранится в единственном файле `screenshots/leetcode-total.png`.
 По замечанию преподавателя его нужно обновлять после каждой практической,
 заменяя предыдущий снимок, а не добавляя копии в hNN. На сохранённом
-снимке от 19 ноября 2026 года 28 решённых задач; ник в этом кадре не виден.
+снимке от 20 ноября 2026 года 32 решённые задачи; ник в этом кадре не виден.
 По исходному G4 счётчик должен быть не меньше числа задач в репозитории.
 Для всех 14 задач нужны фотографии с Accepted, номером, названием и
 пользователем либо датой/временем. Все имеющиеся LeetCode-файлы просмотрены.
@@ -135,3 +136,23 @@ JDK содержит `javap` для просмотра байткода, это 
 
 Полное соответствие A–G пока не заявляется: остаются подтверждения
 Classroom, доступа, истории и скриншотов, а также исключения шаблонных тестов.
+
+## Повторная сверка LeetCode 20 ноября 2026
+
+В h01–h16 есть все 32 файла T1.java/T2.java. Accepted-файлов 30:
+в h03 отсутствуют оба, во всех остальных занятиях по два.
+Это подсчёт файлов, а не подтверждение всех 32 задач в аккаунте.
+Фотографии h01 не показывают код, название или URL: определить задачи нельзя.
+Повторно просмотрены h02, h04–h06: фотографии действительно относятся
+к Add Digits/Double Reversal, Hamming Distance/Number Complement,
+Maximum Product Difference/Squares of Sorted Array, Valid Anagram/Valid Palindrome.
+Ссылки Java-файлов этих занятий относятся к другим задачам шаблона.
+Для h07–h16 соответствие задач подтверждается присланными условиями Classroom
+и Accepted; для строгого G1 многим кадрам не хватает номера/названия.
+Вероятный пропуск пары — h03, но без списка решённых задач аккаунта
+и условий Classroom h01–h06 нельзя установить, какие именно две задачи
+нужно досдать. Автоматически менять старый код или ссылки по догадке нельзя.
+После этой сверки получены условия h03: 1491 и 2894; решения и тесты
+исправлены по Classroom, JDK 25 — 226 тестов без ошибок. Accepted получены
+20 ноября: 1491 — 43/43, 2894 — 737/737. Теперь 32 Accepted-файла, однако
+расхождения h01/h02/h04–h06, перечисленные выше, остаются открытыми.

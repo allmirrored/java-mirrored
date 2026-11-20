@@ -43,9 +43,14 @@ class T2Test {
   }
 
   @Test
-  void roundTripsEveryPermittedValue() {
-    homework.h03.T1 parser = new homework.h03.T1();
-    for (int i = 1; i <= 3999; i++)
-      assertThat(parser.romanToInt(solution.intToRoman(i))).isEqualTo(i);
+  void producesUniqueCanonicalNumeralsForEveryPermittedValue() {
+    java.util.Set<String> numerals = new java.util.HashSet<>();
+    for (int i = 1; i <= 3999; i++) {
+      String roman = solution.intToRoman(i);
+      assertThat(roman)
+          .isNotEmpty()
+          .matches("M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})");
+      assertThat(numerals.add(roman)).isTrue();
+    }
   }
 }
