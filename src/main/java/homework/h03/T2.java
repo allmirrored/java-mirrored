@@ -1,15 +1,16 @@
 package homework.h03;
 
-// https://leetcode.com/problems/reverse-integer/
+// https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/
 public class T2 {
-  public int reverse(int number) {
-    int result = 0;
-    while (number != 0) {
-      int digit = number % 10;
-      if (result > Integer.MAX_VALUE / 10 || result < Integer.MIN_VALUE / 10) return 0;
-      result = result * 10 + digit;
-      number /= 10;
+  public int differenceOfSums(int n, int m) {
+    int difference = 0;
+    for (int number = 1; number <= n; number++) {
+      if (number % m == 0) {
+        difference -= number;
+      } else {
+        difference += number;
+      }
     }
-    return result;
+    return difference;
   }
 }

@@ -8,49 +8,36 @@ class T2Test {
   private final T2 solution = new T2();
 
   @Test
-  void reversesPositiveExample() {
-    assertThat(solution.reverse(123)).isEqualTo(321);
+  void firstExample() {
+    assertThat(solution.differenceOfSums(10, 3)).isEqualTo(19);
   }
 
   @Test
-  void reversesNegativeExample() {
-    assertThat(solution.reverse(-123)).isEqualTo(-321);
+  void secondExample() {
+    assertThat(solution.differenceOfSums(5, 6)).isEqualTo(15);
   }
 
   @Test
-  void dropsTrailingZeroInExample() {
-    assertThat(solution.reverse(120)).isEqualTo(21);
+  void thirdExample() {
+    assertThat(solution.differenceOfSums(5, 1)).isEqualTo(-15);
   }
 
   @Test
-  void returnsZeroForZero() {
-    assertThat(solution.reverse(0)).isZero();
+  void minimumArguments() {
+    assertThat(solution.differenceOfSums(1, 1)).isEqualTo(-1);
+    assertThat(solution.differenceOfSums(1, 1000)).isEqualTo(1);
   }
 
   @Test
-  void preservesSingleDigit() {
-    assertThat(solution.reverse(7)).isEqualTo(7);
+  void maximumArguments() {
+    assertThat(solution.differenceOfSums(1000, 1000)).isEqualTo(498500);
+    assertThat(solution.differenceOfSums(1000, 1)).isEqualTo(-500500);
+    assertThat(solution.differenceOfSums(999, 1000)).isEqualTo(499500);
   }
 
   @Test
-  void returnsZeroForIntegerLimits() {
-    assertThat(solution.reverse(Integer.MIN_VALUE)).isZero();
-    assertThat(solution.reverse(Integer.MAX_VALUE)).isZero();
-  }
-
-  @Test
-  void rejectsPositiveOverflow() {
-    assertThat(solution.reverse(1534236469)).isZero();
-  }
-
-  @Test
-  void rejectsNegativeOverflow() {
-    assertThat(solution.reverse(-1563847412)).isZero();
-  }
-
-  @Test
-  void acceptsValuesNearOverflowThreshold() {
-    assertThat(solution.reverse(1463847412)).isEqualTo(2147483641);
-    assertThat(solution.reverse(-1463847412)).isEqualTo(-2147483641);
+  void zeroDifference() {
+    assertThat(solution.differenceOfSums(3, 2)).isEqualTo(2);
+    assertThat(solution.differenceOfSums(3, 3)).isZero();
   }
 }

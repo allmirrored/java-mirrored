@@ -1,26 +1,16 @@
 package homework.h03;
 
-// https://leetcode.com/problems/roman-to-integer/
+// https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
 public class T1 {
-  public int romanToInt(String roman) {
+  public double average(int[] salary) {
+    int minimum = Integer.MAX_VALUE;
+    int maximum = Integer.MIN_VALUE;
     int total = 0;
-    int previous = 0;
-    for (int i = roman.length() - 1; i >= 0; i--) {
-      int value =
-          switch (roman.charAt(i)) {
-            case 'I' -> 1;
-            case 'V' -> 5;
-            case 'X' -> 10;
-            case 'L' -> 50;
-            case 'C' -> 100;
-            case 'D' -> 500;
-            case 'M' -> 1000;
-            default -> throw new IllegalArgumentException("Invalid Roman numeral");
-          };
-      if (value < previous) total -= value;
-      else total += value;
-      previous = value;
+    for (int value : salary) {
+      minimum = Math.min(minimum, value);
+      maximum = Math.max(maximum, value);
+      total += value;
     }
-    return total;
+    return (double) (total - minimum - maximum) / (salary.length - 2);
   }
 }
