@@ -23,6 +23,6 @@ jobs:
           java-version: '25'
           cache: maven
       - name: Verify README exists
-        run: test -f NOTHING.md
+        run: test -f readme.md
       - name: Check formatting and run tests
         run: mvn --batch-mode --no-transfer-progress -Djqwik.database=target/jqwik-database spotless:check test
